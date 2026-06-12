@@ -49,9 +49,9 @@
 
 и в браузере ```http://localhost:8000/api/openapi```
 
-4. **Проверка админки:**
+## ⚡ Проверка админки
 
-http://localhost:83/admin
+В браузере ткнуться по url: http://localhost:83/admin
 
 login/pass: super/puper
 
