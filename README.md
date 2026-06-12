@@ -12,7 +12,13 @@
 
 ### Запуск и удаление:
 
-1. Переименовать **etl/env_example в etl/.env**
+1. Подготовительные работы:
+
+1.1 Переименовать **etl/env_example в etl/.env**
+
+1.2 Переименовать **admin/env_example в admin/.env**
+
+
 2. Запуск и сборка: **docker-compose up --build**
 
 
@@ -37,13 +43,21 @@
 2. **Запуск сервера:**
     ```fastapi dev fa-app/main.py```
 
-3. **Проверка:**
+3. **Проверка приложения Fast-API app:**
+
 ```curl http://127.0.0.1:8000/api/v1/films/ac58403b-7070-4dcc-8e53-fa2d2d2284ab```
+
 и в браузере ```http://localhost:8000/api/openapi```
+
+4. **Проверка админки:**
+
+http://localhost:83/admin
+
+login/pass: super/puper
 
 ##Схемка для понимания:
 
-![Схема, два процесса](docs/archi-1.png)
+![Диаграмма взаимодействия и компоновки контейнеров](docs/archi-2.png)
 
 ##Структура проекта:
 ```
