@@ -1,0 +1,18 @@
+# Игнорирование системных и служебных файлов
+.git
+.gitignore
+.dockerignore
+.env
+Dockerfile*
+docker-compose*
+myenv/
+**/__pycache__/
+env_exmaple
+**/.venv/
+**/venv/
+**/ENV/
+**/myenv/
+# IDE & OS files
+.idea/
+.vscode/
+.DS_Store

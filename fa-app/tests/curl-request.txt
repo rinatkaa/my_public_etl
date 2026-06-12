@@ -1,0 +1,1 @@
+curl http://127.0.0.1:8000/api/v1/films/ac58403b-7070-4dcc-8e53-fa2d2d2284ab

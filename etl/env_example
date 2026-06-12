@@ -1,0 +1,24 @@
+#PG_HOST=cinema-db
+PG_HOST=cinema-db
+PG_PORT=5432
+PG_DATABASE=postgres
+PG_USER=postgres
+PG_PASSWORD=''
+
+#ES_HOST=elasticsearch
+ES_HOST=elasticsearch
+ES_PORT=9200
+ES_SCHEME=http
+ES_INDEX_NAME=movies
+
+#APP Config + backoff timers
+BATCH_SIZE=200
+PG_MAX_CONNECT_ATTEMPTS=5
+PG_CONNECT_BACKOFF_FACTOR=1.0
+ES_MAX_CONNECT_ATTEMPTS=5
+ES_CONNECT_BACKOFF_FACTOR=1.0
+
+#Deploy timers
+PG_CHECK_INTERVAL=5      # проверка PG каждые 5 сек
+ES_CHECK_INTERVAL=5      # проверка ES каждые 5 сек
+ETL_RUN_INTERVAL=20     # запуск ETL каждые 20  сек 

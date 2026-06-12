@@ -1,0 +1,108 @@
+services:
+  cinema-db:
+    image: postgres:16
+    container_name: cinema-db
+    environment:
+       - POSTGRES_PASSWORD=""
+       - POSTGRES_HOST_AUTH_METHOD="trust"
+    ports:
+      - "5431:5432"
+    networks:
+      - etl-net
+    volumes:
+      - ./init_db/database_dump.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  elasticsearch:
+    container_name: es-container
+    image: elasticsearch:8.19.15
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    networks:
+      - etl-net
+    depends_on:
+      - cinema-db
+    ports:
+      - "9200:9200"
+
+  etl-service:
+    container_name: etl-app
+    build:
+      context: ./etl
+      dockerfile: Dockerfile
+    env_file:
+      - ./etl/.env
+    networks:
+      - etl-net
+    depends_on:
+     - cinema-db
+     - elasticsearch
+
+  redis:
+    image: redis:alpine
+    container_name: redis_server
+    ports:
+      - "6379:6379"
+    # Ensure NO '--requirepass' flag is passed here
+    command: redis-server 
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "$REDIS_PASSWORD", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    depends_on:
+     - cinema-db
+     - elasticsearch
+
+  web-admin:
+    container_name: django-admin
+    build:
+      context: ./admin/app
+      dockerfile: Dockerfile
+#не публикуем сервис наружу из контейнера
+    expose:
+      - "8000"
+    env_file:
+      - ./admin/.env
+    volumes:
+      - ./shared-data:/opt/app/static
+    networks:
+      - etl-net
+    depends_on:
+      cinema-db:
+        condition: service_healthy
+    command: >
+      sh -c "python manage.py migrate --no-input &&
+      python3 manage.py createsuperuser --no-input"
+
+  nginx:
+    container_name: ws-nginx
+    image: nginx:latest
+    volumes:
+      - ./admin/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./admin/configs:/etc/nginx/conf.d:ro
+      - ./shared-data:/data/static:ro
+      #- ./data:/data:ro
+    depends_on:
+      - web-admin
+    ports:
+#если правите номер порта, внесите правку в /admin/app/example/settings.py в секцию CSRF_TRUSTED_ORIGINS = []
+      - "83:80"
+    networks:
+      - etl-net
+    restart: on-failure
+
+volumes:
+  shared-data:
+
+networks:
+  etl-net:
+    driver: bridge

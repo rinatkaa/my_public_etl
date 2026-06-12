@@ -1,0 +1,15 @@
+# Python-generated files
+**/__pycache__/
+**/venv/
+*.py[oc]
+build/
+wheels/
+shared-data/
+*.egg-info
+
+# Project files
+.venv
+.idea/
+.DS_Store
+.env
+.vscode/

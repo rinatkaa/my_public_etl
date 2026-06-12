@@ -1,0 +1,85 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Страница-1" id="ylrIxV9GPs74ojPF1bIA">
+    <mxGraphModel dx="1237" dy="622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-6" edge="1" parent="1" source="JrgoMDOt1cPQA-lKkwD_-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="JrgoMDOt1cPQA-lKkwD_-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-10" connectable="0" parent="JrgoMDOt1cPQA-lKkwD_-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="HTTP Req" vertex="1">
+          <mxGeometry relative="1" x="0.04" y="1" as="geometry">
+            <mxPoint y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Nginx&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Реверс-прокси&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="290" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-11" edge="1" parent="1" source="JrgoMDOt1cPQA-lKkwD_-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="JrgoMDOt1cPQA-lKkwD_-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-12" connectable="0" parent="JrgoMDOt1cPQA-lKkwD_-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="ASGI" vertex="1">
+          <mxGeometry relative="1" x="0.0333" y="1" as="geometry">
+            <mxPoint y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Uvicorn&lt;div&gt;&lt;br&gt;&lt;div&gt;Сервер приложений&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="510" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-14" edge="1" parent="1" source="JrgoMDOt1cPQA-lKkwD_-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" target="JrgoMDOt1cPQA-lKkwD_-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t_6mPYgolRhwLFEpRCIH-4" edge="1" parent="1" source="JrgoMDOt1cPQA-lKkwD_-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" target="t_6mPYgolRhwLFEpRCIH-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="App&lt;div&gt;&lt;br&gt;&lt;div&gt;Приложение на FastAPI&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="750" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;rounded=0;" value="1. Типовой запрос на чтение" vertex="1">
+          <mxGeometry height="30" width="240" x="75" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-8" edge="1" parent="1" source="JrgoMDOt1cPQA-lKkwD_-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="JrgoMDOt1cPQA-lKkwD_-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-9" connectable="0" parent="JrgoMDOt1cPQA-lKkwD_-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="HTTP Req" vertex="1">
+          <mxGeometry relative="1" x="-0.0222" y="-2" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Потребитель" vertex="1">
+          <mxGeometry height="60" width="120" x="75" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ElasticDB" vertex="1">
+          <mxGeometry height="60" width="120" x="970" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;rounded=0;" value="2. Обновление/наполнение кэша ElasticDB (ETL)" vertex="1">
+          <mxGeometry height="30" width="315" x="75" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-20" edge="1" parent="1" source="JrgoMDOt1cPQA-lKkwD_-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" target="JrgoMDOt1cPQA-lKkwD_-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="ETL - APP" vertex="1">
+          <mxGeometry height="60" width="120" x="340" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ElasticDB" vertex="1">
+          <mxGeometry height="60" width="120" x="660" y="496" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-19" edge="1" parent="1" source="JrgoMDOt1cPQA-lKkwD_-18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;curved=0;" target="JrgoMDOt1cPQA-lKkwD_-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Postgres DB" vertex="1">
+          <mxGeometry height="60" width="120" x="660" y="596" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-22" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;align=left;" value="1. На какой модели данных работаем?&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Индексы используем те же ?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="260" x="830" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="JrgoMDOt1cPQA-lKkwD_-23" parent="1" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#f8cecc;strokeColor=#b85450;" value="логика работы?" vertex="1">
+          <mxGeometry height="80" width="140" x="860" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="t_6mPYgolRhwLFEpRCIH-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="RedisDB" vertex="1">
+          <mxGeometry height="60" width="120" x="970" y="330" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,4 @@
+fastapi[standard]
+elasticsearch[async]==8.13.2
+redis==5.0.4 
+orjson
